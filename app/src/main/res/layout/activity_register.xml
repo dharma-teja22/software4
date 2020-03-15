@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register"
+    android:background="@drawable/grad_bg">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="40dp">
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/et_bg"
+            android:hint="enter name"/>
+        <EditText
+            android:id="@+id/rollno"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/et_bg"
+            android:hint="enter roll no(CB.EN.U4...)"
+            android:maxLength="16"/>
+        <EditText
+            android:id="@+id/mobileno"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/et_bg"
+            android:hint="enter mobile number"
+            android:inputType="number"
+            android:maxLength="10"/>
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/et_bg"
+            android:hint="create username(7 or more char's)"/>
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginTop="25dp"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/et_bg"
+            android:hint="create password(7 or more char's)"/>
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTER"
+            android:background="@color/transparent"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:fontFamily="sans_serif"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_gravity="center_horizontal"/>
+    </LinearLayout>
+
+</RelativeLayout>

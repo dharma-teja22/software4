@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grad_bg"
+    android:orientation="vertical"
+    tools:context=".Home">
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/up"
+        android:layout_marginTop="200dp"
+        android:text="SEARCH BOOK"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:id="@+id/search"
+        android:layout_gravity="center_horizontal"/>
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/up"
+        android:layout_marginTop="50dp"
+        android:text="RETURN BOOK"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:id="@+id/return1"
+        android:layout_gravity="center_horizontal"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/up"
+        android:layout_marginTop="50dp"
+        android:text="LOGOUT"
+        android:textAllCaps="false"
+        android:background="@drawable/btn_bg"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="70dp"
+        android:paddingRight="70dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:id="@+id/logout"
+        android:layout_gravity="center_horizontal"/>
+
+
+
+</LinearLayout>
