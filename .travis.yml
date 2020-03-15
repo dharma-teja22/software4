@@ -40,6 +40,13 @@ script:
   - ./gradlew -Dtest.single=me.toptas.rssreader.UnitTestSuite clean test
   - ./gradlew assembleDebug
   
+before_deploy:
+      # Set up git user name and tag this commit
+      - git config --local user.name "dharma-teja22"
+      - git config --local user.email "makinateja2@gmail.com"
+      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+      - git tag $TRAVIS_TAG
+      
 deploy:
   provider: releases
   api-key: $GITHUB_API_KEY
@@ -52,6 +59,7 @@ deploy:
   target_commitish: $TRAVIS_COMMIT
   on:
     tags: true
+    branch: master
 
 after_deploy:
   - rm -rf $TRAVIS_BUILD_DIR/app/build/outputs
