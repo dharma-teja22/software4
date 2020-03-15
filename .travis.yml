@@ -40,28 +40,16 @@ script:
   - ./gradlew -Dtest.single=me.toptas.rssreader.UnitTestSuite clean test
   - ./gradlew assembleDebug
   
-before_deploy:
-      # Set up git user name and tag this commit
-      - git config --local user.name "dharma-teja22"
-      - git config --local user.email "makinateja2@gmail.com"
-      - export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
-      - git tag $TRAVIS_TAG
-      
 deploy:
   provider: releases
-  api-key: $GITHUB_API_KEY
-  file: C:/Users/MANISH/AndroidStudioProjects/software4/app/build/outputs/apk/debug/app-debug.apk
+  api-key: 824005b7d1b048ae68c51b5b98788eb4c5f4bdc1
+  file: $HOME/AndroidStudioProjects/software4/app/build/outputs/apk/debug/app-debug.apk
   skip_cleanup: true
-  name: dev-build-$TRAVIS_TAG
-  body: Automatic build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
-  prerelease: true
   overwrite: true
-  target_commitish: $TRAVIS_COMMIT
   on:
     tags: true
-    branch: master
     repo: dharma-teja22/software4
 
 
 after_deploy:
-  - rm -rf C:/Users/MANISH/AndroidStudioProjects/software4/app/build/outputs
+  - rm -rf $HOME/AndroidStudioProjects/software4/app/build/outputs
