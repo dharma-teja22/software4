@@ -1,8 +1,10 @@
 package com.example.software4;
 
+import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -14,12 +16,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 public class forgot1 extends AppCompatActivity {
     EditText e;
     String s;
     SQLiteDatabase db5,dtb1,dt;
     Cursor c1,c2;
+    private static final int MY_PERMISSIONS_REQUEST_SEND_SMS = 1;
     @Override
 
 
@@ -41,8 +45,11 @@ public class forgot1 extends AppCompatActivity {
                     String s=c1.getString(2);
                     Log.d("manish",s);
                     Intent intent=new Intent(getApplicationContext(),forgot2.class);
+                    intent.putExtra("uname",s);
                     PendingIntent pi= PendingIntent.getActivity(getApplicationContext(), 0, intent,0);
 //Get the SmsManager instance and call the sendTextMessage method to send message
+                    if(checkForSmsPermission())
+                        return;
                     SmsManager sms=SmsManager.getDefault();
                     sms.sendTextMessage(s, null, "4488", pi,null);
                     Toast.makeText(getApplicationContext(), "Message Sent successfully!",
@@ -54,8 +61,8 @@ public class forgot1 extends AppCompatActivity {
                     smsManager.sendTextMessage(s, null, "Test message", null, null);
                     sendSMS(s ,"5567");*/
 
-                    intent.putExtra("uname",s);
-                    startActivity(intent);
+
+//                    startActivity(intent);
                 }
                 else{
                     Toast.makeText(getApplicationContext(),"username doen't exist",Toast.LENGTH_LONG).show();
@@ -65,7 +72,26 @@ public class forgot1 extends AppCompatActivity {
     }
     private void sendSMS(String phoneNumber, String message)
     {
+        if(checkForSmsPermission())
+            return;
         SmsManager sms = SmsManager.getDefault();
         sms.sendTextMessage(phoneNumber, null, message, null, null);
+    }
+    private boolean checkForSmsPermission() {
+        if (ActivityCompat.checkSelfPermission(this,
+                Manifest.permission.SEND_SMS) !=
+                PackageManager.PERMISSION_GRANTED) {
+            // Permission not yet granted. Use requestPermissions().
+            // MY_PERMISSIONS_REQUEST_SEND_SMS is an
+            // app-defined int constant. The callback method gets the
+            // result of the request.
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.SEND_SMS},
+                    MY_PERMISSIONS_REQUEST_SEND_SMS);
+            return true;
+        } else {
+            return false;
+            // Permission already granted. Enable the SMS button.
+        }
     }
 }
