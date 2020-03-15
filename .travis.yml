@@ -43,7 +43,7 @@ script:
 deploy:
   provider: releases
   api-key:
-    secure: 824005b7d1b048ae68c51b5b98788eb4c5f4bdc1
+    secure: 57196abf7b771a2fb9dbba170b1ee2fe3146261f
   file: "C:/Users/MANISH/AndroidStudioProjects/software4/app/build/outputs/apk/debug/app-debug.apk"
   skip_cleanup: true
   overwrite: true
