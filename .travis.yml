@@ -50,7 +50,7 @@ before_deploy:
 deploy:
   provider: releases
   api-key: $GITHUB_API_KEY
-  file: C:/Users/MANISH/AndroidStudioProjects/software4/app/build/outputs/apk/debug/app-debug.apk
+  file: C:\Users\MANISH\AndroidStudioProjects\software4\app\build\outputs\apk\debug\app-debug.apk
   skip_cleanup: true
   name: dev-build-$TRAVIS_TAG
   body: Automatic build of $TRAVIS_BRANCH ($TRAVIS_COMMIT) built by Travis CI on $(date +'%F %T %Z').
@@ -63,8 +63,5 @@ deploy:
     repo: dharma-teja22/software4
 
 
-after_success:
-- sh set_tags.sh
-
 after_deploy:
-  - rm -rf $TRAVIS_BUILD_DIR/app/build/outputs
+  - rm -rf C:/Users/MANISH/AndroidStudioProjects/software4/app/build/outputs
