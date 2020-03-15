@@ -46,6 +46,7 @@ public class forgot1 extends AppCompatActivity {
                     Log.d("manish",s);//d
                     //h
                     //helo
+                    //hola
                     Intent intent=new Intent(getApplicationContext(),forgot2.class);
                     intent.putExtra("uname",s);
                     PendingIntent pi= PendingIntent.getActivity(getApplicationContext(), 0, intent,0);
