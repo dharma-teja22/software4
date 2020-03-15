@@ -44,7 +44,7 @@ public class forgot1 extends AppCompatActivity {
                     //c2 = dtb1.rawQuery("SELECT * FROM reg WHERE username='" + s + "'", null);
                     String s=c1.getString(2);
                     Log.d("manish",s);//d
-                    //e
+                    //h
                     //helo
                     Intent intent=new Intent(getApplicationContext(),forgot2.class);
                     intent.putExtra("uname",s);
