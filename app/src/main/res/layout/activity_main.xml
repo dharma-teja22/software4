@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
             android:layout_marginLeft="5dp"
-            android:text="LMS"
+            android:text="lms"
             android:textSize="30sp"
             android:textFontWeight="@android:integer/config_longAnimTime"
             android:textColorHighlight="@color/colorPrimaryDark"
