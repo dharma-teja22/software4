@@ -75,7 +75,7 @@
             android:paddingRight="15dp"
             android:fontFamily="sans-serif-light"
             android:background="@drawable/et_bg"
-            android:hint="create password(7 or more char's)"/>
+            android:hint="create password(8 or more char's)"/>
         <Button
             android:id="@+id/register"
             android:layout_width="wrap_content"

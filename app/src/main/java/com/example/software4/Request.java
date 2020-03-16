@@ -110,7 +110,7 @@ public class Request extends AppCompatActivity {
                             String yt = id;
                             dtb1.execSQL("UPDATE reg SET b1id='" + id + "' WHERE username='" + name + "'");
                             db5.execSQL("UPDATE books SET available='" + 0 + "' WHERE id='" + id + "'");
-                            db5.execSQL("UPDATE books SET issueDate='" + "12-03-2020" + "' WHERE id='" + id + "'");
+                            db5.execSQL("UPDATE books SET issueDate='" + formattedDate + "' WHERE id='" + id + "'");
                             flag1 = false;
                             Cursor c = db5.rawQuery("SELECT * FROM books WHERE id='" + id + "'", null);
                             String po = "error";

@@ -54,9 +54,9 @@ public class forgot1 extends AppCompatActivity {
                     if(checkForSmsPermission())
                         return;
                     SmsManager sms=SmsManager.getDefault();
-                    sms.sendTextMessage(s, null, "4488", pi,null);
-                    Toast.makeText(getApplicationContext(), "Message Sent successfully!",
-                            Toast.LENGTH_LONG).show();
+                    sms.sendTextMessage(s, null, "your otp is : 4488", pi,null);
+                    //Toast.makeText(getApplicationContext(), "Message Sent successfully!",
+                            //Toast.LENGTH_LONG).show();
 
 
 

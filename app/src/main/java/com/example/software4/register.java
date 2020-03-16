@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -69,6 +70,7 @@ public class register extends AppCompatActivity {
                     //
                     substr=roll.substring(0,11);
                     //Toast.makeText(getApplicationContext(),"SUBSTRING"+substr+" ",Toast.LENGTH_LONG).show();
+                    Log.d("Manish",substr);
                     count1=count;
                     for(int i=0;i<7;i++){
                         if(substr.equals(roll1[i])){
@@ -81,11 +83,17 @@ public class register extends AppCompatActivity {
                     }
 
                     //Toast.makeText(getApplicationContext(),"Username already exists",Toast.LENGTH_LONG).show();
-                    else if(count>count1){c=dtb1.rawQuery("SELECT * FROM reg WHERE username=\'" + usernam + "\'",null);
+                    else if(count>count1){c=dtb1.rawQuery("SELECT * FROM reg WHERE username='" + usernam + "'",null);
 //                String.format("My Company name is %s %s", name,sjshaj);
                     if(c.moveToFirst()){
-                        Toast.makeText(getApplicationContext(),"Username already exists" + " " + c.getCount(),Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"Username already exists" ,Toast.LENGTH_LONG).show();
                     }
+                   /* else if(!c.moveToFirst()){
+                        c1=dtb1.rawQuery("SELECT * FROM reg WHERE rollno='" + roll + "'",null);
+                        if(c1.moveToFirst()){
+                            Toast.makeText(getApplicationContext(),"Roll number already exists" ,Toast.LENGTH_LONG).show();
+                        }
+                    }*/
                     else{
                         dtb1.execSQL("INSERT INTO reg VALUES('" + name + "','" + roll +
                                 "','" + mobil + "','" + usernam + "','" + passw + "','" + "1000" + "','" + "1000" + "','" + "1000" + "');");
@@ -143,7 +151,10 @@ public class register extends AppCompatActivity {
         }
     }
     public boolean check5(int a){
-        if(a>=7 && a<=16){
+       // int k2=a.length();
+        //int c1=0,c2=0;
+        if(a>=8 && a<=16){
+
             return true;
         }
         else{

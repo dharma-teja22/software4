@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".forgot2"></activity>
+        <activity android:name=".forgot3"></activity>
+        <activity android:name=".forgot2" />
         <activity android:name=".forgot1" />
         <activity android:name=".addbooks" />
         <activity android:name=".admin" />

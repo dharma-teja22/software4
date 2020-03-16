@@ -150,6 +150,7 @@ b15.setOnClickListener(new View.OnClickListener() {
                 dtb1.execSQL("UPDATE reg SET b1id='" + "1000" + "' WHERE username='" + name + "'");
                 clearText(t1);
                 clearText(t4);
+                clearText(t7);
                 b30.setVisibility(View.GONE);
                // Toast.makeText(cart.this,"Book Returned!", Toast.LENGTH_LONG).show();
 //                Toast.makeText(cart.this,"Book Returned!", Toast.LENGTH_LONG).show();
@@ -188,6 +189,7 @@ b15.setOnClickListener(new View.OnClickListener() {
                 dtb1.execSQL("UPDATE reg SET b2id='" + "1000" + "' WHERE username='" + name + "'");
                 clearText(t2);
                 clearText(t5);
+                clearText(t8);
                 b31.setVisibility(View.GONE);
               //  Toast.makeText(cart.this,"Book Returned!", Toast.LENGTH_LONG).show();
                 k1=db5.rawQuery("SELECT * FROM books WHERE id='" + n + "'", null);
@@ -215,6 +217,7 @@ b15.setOnClickListener(new View.OnClickListener() {
                 dtb1.execSQL("UPDATE reg SET b3id='" + "1000" + "' WHERE username='" + name + "'");
                 clearText(t3);
                 clearText(t6);
+                clearText(t9);
                 b32.setVisibility(View.GONE);
               //  Toast.makeText(cart.this,"Book Returned!", Toast.LENGTH_LONG).show();
                 k1=db5.rawQuery("SELECT * FROM books WHERE id='" + o + "'", null);
