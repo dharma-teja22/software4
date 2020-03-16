@@ -1,10 +1,10 @@
 package com.example.software4;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -26,9 +26,15 @@ EditText e2;
             public void onClick(View v) {
                 String s=e2.getText().toString();
                 if(s.equals("4488")){
-                    Intent i=new Intent(forgot2.this,forgot3.class);
+                   /* Intent i=new Intent(forgot2.this,forgot3.class);
                     i.putExtra("uname",name);
-                    startActivity(i);
+                    startActivity(i);*/
+                    Toast.makeText(getApplicationContext(),"success",Toast.LENGTH_LONG).show();
+
+
+
+
+                    //Toast.makeText(getApplicationContext(),"hii",Toast.LENGTH_LONG).show();
                 }
                 //Toast.makeText(getApplicationContext(),"hii",Toast.LENGTH_LONG).show();
             }
