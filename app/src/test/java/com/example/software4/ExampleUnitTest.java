@@ -31,14 +31,14 @@ public class ExampleUnitTest {
         assertEquals(true,output);
 
     }
-    /*@Test
+    @Test
     public void chk3(){
         register rg2=new register();
         boolean output;
         output=rg2.check3(9);
-        assertEquals(true,output);
+        assertEquals(false,output);
 
-    }*/
+    }
     @Test
     public void chk4(){
         register rg3=new register();
@@ -47,22 +47,22 @@ public class ExampleUnitTest {
         assertEquals(true,output);
 
     }
-    @Test
+   /* @Test
     public void chk5(){
         register rg4=new register();
         boolean output;
         output=rg4.check5(11);
         assertEquals(true,output);
 
-    }
+    }*/
 
-   /* @Test
+    @Test
     public void chk6(){
         cart cr=new cart();
         boolean output;
         output=cr.chkfine("21-02-2020","19-02-2020");
         assertEquals(true,output);
-    }*/
+    }
     @Test
     public void chk7(){
         cart cr1=new cart();
@@ -78,11 +78,18 @@ public class ExampleUnitTest {
         output=ab.ch1(5);
         assertEquals(true,output);
     }
-   /* @Test
+    @Test
     public void chk9(){
         addbooks ab1=new addbooks();
         boolean output;
         output=ab1.ch2(9);
+        assertEquals(false,output);
+    }
+   /* @Test
+    public void chk10(){
+        forgot1 c1=new forgot1();
+        boolean output;
+        output=c1.check20("manish1616j");
         assertEquals(true,output);
     }*/
 }

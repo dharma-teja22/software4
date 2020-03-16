@@ -297,7 +297,7 @@ b15.setOnClickListener(new View.OnClickListener() {
        t.setText("");
    }
   public boolean chkfine(String a,String b) {
-     Log.d("manish",a+" "+b+" ");
+     //Log.d("manish",a+" "+b+" ");
        /*int l,m,n,o,p,q,r;
        l=Integer.parseInt(a.substring(0,2));
        m=Integer.parseInt(b.substring(0,2));

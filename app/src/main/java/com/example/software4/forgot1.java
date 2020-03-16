@@ -42,6 +42,7 @@ public class forgot1 extends AppCompatActivity {
 
                 if(c1.moveToFirst()){
                     //c2 = dtb1.rawQuery("SELECT * FROM reg WHERE username='" + s + "'", null);
+                   // c1 = dtb1.rawQuery("SELECT * FROM reg WHERE username='" + s + "'", null);
                     String s=c1.getString(2);
                     Log.d("manish",s);//d
                     //h
@@ -95,6 +96,15 @@ public class forgot1 extends AppCompatActivity {
         } else {
             return false;
             // Permission already granted. Enable the SMS button.
+        }
+    }
+    public boolean check20(String s){
+        c1 = dtb1.rawQuery("SELECT * FROM reg WHERE username='" + s + "'", null);
+        if(c1.moveToFirst()){
+            return true;
+        }
+        else{
+            return false;
         }
     }
 }
