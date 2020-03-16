@@ -48,8 +48,10 @@ Cursor c;
                           db5.execSQL("INSERT INTO books VALUES('" + j + "','" + s +
                                   "','" + 1 + "','" + "null" + "');");
                       }
-                        Toast.makeText(getApplicationContext(),"Successfully uploaded!"+l,Toast.LENGTH_LONG).show();
-                      Intent i=new Intent(addbooks.this,admin.class);
+                        Toast.makeText(getApplicationContext(),"Successfully uploaded!",Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(),"no.of books in database : "+l,Toast.LENGTH_LONG).show();
+
+                        Intent i=new Intent(addbooks.this,admin.class);
                         i.putExtra("uname",name);
                         startActivity(i);
                     }
