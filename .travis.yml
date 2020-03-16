@@ -4,8 +4,8 @@ jdk: oraclejdk8
 
 env:
   global:
-  - ANDROID_API_LEVEL=29
-  - ANDROID_BUILD_TOOLS_VERSION=29.0.3
+  - ANDROID_API_LEVEL=28
+  - ANDROID_BUILD_TOOLS_VERSION=28.0.3
   - ANDROID_ABI=armeabi-v7a
 
 android:
@@ -37,20 +37,3 @@ before_script:
 
 script:
   - ./gradlew clean build
-  - ./gradlew -Dtest.single=me.toptas.rssreader.UnitTestSuite clean test
-  - ./gradlew assembleDebug
-  
-deploy:
-  provider: releases
-  api-key:
-    secure:  1dab4f5b4e06a40fd1fab6b26e3fb5b548f660fb
-  file: "C:/Users/MANISH/AndroidStudioProjects/software4/app/build/outputs/apk/debug/app-debug.apk"
-  skip_cleanup: true
-  overwrite: true
-  on:
-    tags: true
-    repo: dharma-teja22/software4
-
-
-after_deploy:
-  - rm -rf $HOME/AndroidStudioProjects/software4/app/build/outputs
